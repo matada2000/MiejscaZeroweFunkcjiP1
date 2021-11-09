@@ -1,0 +1,1 @@
+"# MiejscaZeroweFunkcjiP1" 
