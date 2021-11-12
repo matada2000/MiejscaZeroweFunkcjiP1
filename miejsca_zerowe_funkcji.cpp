@@ -8,14 +8,21 @@ int main() {
 	float a, b, c, mz_1, mz_2, delta;
 
 	cout << "Podaj a: ", cin >> a;
+	cout << "Podaj b: ", cin >> b;
+    cout << "Podaj c: ", cin >> c;
 
 	if (a == 0) {
-		cout << "a nie moze wynosic 0" << endl;
+        if(b == 0 && c == 0) {
+            cout << "Funkcja ma nieskonczenie wiele miejsc zerowych" << endl;
+        } else if(b == 0 && c != 0) {
+            cout << "Funkcja nie ma miejsc zerowych" << endl;
+        } else {
+            mz_1 = -c / b;
+
+            cout << "Miejsce zerowe tej funkcji wynosi: " << mz_1 << endl;
+        }
 	}
 	else {
-		cout << "Podaj b: ", cin >> b;
-		cout << "Podaj c: ", cin >> c;
-
 		delta = (b*b) - (4*a*c);
 
 		if(delta < 0){
