@@ -6,7 +6,7 @@ using namespace std;
 int main() {
 	
 	int wybor;
-	float a, b, c, mz_1, mz_2, delta, p, q;
+	float a, b, c, mz_1, mz_2, delta, p, q, zmiana;
 	
 	cout << "Wybierz Funkcje:" << endl;
 	cout << "1 - Funkcja liniowa." << endl;
