@@ -4,25 +4,40 @@
 using namespace std;
 
 int main() {
-
+	
+	int wybor;
 	float a, b, c, mz_1, mz_2, delta;
-
-	cout << "Podaj a: ", cin >> a;
-	cout << "Podaj b: ", cin >> b;
-    cout << "Podaj c: ", cin >> c;
-
-	if (a == 0) {
-        if(b == 0 && c == 0) {
+	
+	cout << "Wybierz Funkcje:" << endl;
+	cout << "1 - Funkcja liniowa." << endl;
+	cout << "2 - Funkcja kwadratowa." << endl;
+	cout << endl;
+	cout << "Wybieram: ", cin >> wybor;
+	cout << endl;
+	
+	switch(wybor)
+	{
+	case 1:
+		cout << "Podaj a: ", cin >> a;
+		cout << "Podaj b: ", cin >> b;
+		if(a == 0 && b == 0) {
             cout << "Funkcja ma nieskonczenie wiele miejsc zerowych" << endl;
-        } else if(b == 0 && c != 0) {
+        } else if(a == 0 && b != 0) {
             cout << "Funkcja nie ma miejsc zerowych" << endl;
         } else {
-            mz_1 = -c / b;
+            mz_1 = -a / b;
 
             cout << "Miejsce zerowe tej funkcji wynosi: " << mz_1 << endl;
         }
-	}
-	else {
+	break;
+	case 2:
+		cout << "Podaj a: ", cin >> a;
+		if(a==0){
+			cout << "Pomyliles funkcje kolezko :)";
+			return 0;
+		}
+		cout << "Podaj b: ", cin >> b;
+    	cout << "Podaj c: ", cin >> c;
 		delta = (b*b) - (4*a*c);
 
 		if(delta < 0){
@@ -41,6 +56,7 @@ int main() {
 
             cout << "Miejsca zerowe tej funkcji wynosza: " << mz_1 << " oraz " << mz_2 << endl;
 		}
+	break;	
 	}
 
 	return 0;
