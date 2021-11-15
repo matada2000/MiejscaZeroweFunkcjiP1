@@ -6,11 +6,12 @@ using namespace std;
 int main() {
 	
 	int wybor;
-	float a, b, c, mz_1, mz_2, delta;
+	float a, b, c, mz_1, mz_2, delta, p, q;
 	
 	cout << "Wybierz Funkcje:" << endl;
 	cout << "1 - Funkcja liniowa." << endl;
 	cout << "2 - Funkcja kwadratowa." << endl;
+	cout << "3 - Funkcja kwadratowa, postac kanoniczna." << endl;
 	cout << endl;
 	cout << "Wybieram: ", cin >> wybor;
 	cout << endl;
@@ -56,6 +57,28 @@ int main() {
 
             cout << "Miejsca zerowe tej funkcji wynosza: " << mz_1 << " oraz " << mz_2 << endl;
 		}
+	break;
+	case 3:
+	cout << "Podaj a: ", cin >> a;
+	if(a==0){
+			cout << "Pomyliles funkcje kolezko :)";
+			return 0;
+		}
+    cout << "Podaj p: ", cin >> p;
+    cout << "Podaj q: ", cin >> q;
+
+	b = -2*a*p;
+	c = a*p*2+q;
+	
+    if(a == 0 && c == 0){
+        cout << "Funkcja ma nieskonczenie wiele miejsc zerowych" << endl;
+    } else if(a == 0 && c != 0){
+        cout << "Funkcja nie ma miejsc zerowych" << endl;
+    } else{
+        mz_1 = -c / a;
+        cout << "Miejsce zerowe tej funkcji wynosi: " << mz_1 << endl;
+    }
+		
 	break;	
 	}
 
